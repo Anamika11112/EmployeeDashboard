@@ -1,0 +1,9 @@
+.error_container span {
+    min-height: 13px;
+    margin-bottom: 2px;
+    color: red;
+    font-size: 18px;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
