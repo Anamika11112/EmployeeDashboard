@@ -44,7 +44,7 @@ function Dashboard() {
   }, []);
   useEffect(() => {
     fetchEmployeeDetailes();
-  }, [fetchEmployeeDetailes]);
+  }, []);
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -109,7 +109,6 @@ function Dashboard() {
         >
           <EmpForm
             fetchEmployeeDetailes={fetchEmployeeDetailes}
-            setdataArray={setdataArray}
             toggleModal={toggleModal}
           />
         </Modal>
@@ -121,7 +120,6 @@ function Dashboard() {
         >
           <EmpForm
             toggleModal={toggleModal}
-            setdataArray={setdataArray}
             editEmployeeModal={editEmployeeModal}
             empToEdit={empToEdit}
             fetchEmployeeDetailes={fetchEmployeeDetailes}

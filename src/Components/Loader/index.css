@@ -7,7 +7,7 @@
 .loader{
     width:100px;
     height:100px;
-    border: 10px solid  rgb(227, 227, 227);
+    border: 10px solid  #e3e3e3;
     border-top: 10px solid  #0097a2ca;
     border-radius: 50%;
     animation: spin 2s linear infinite;

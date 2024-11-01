@@ -4,12 +4,12 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    box-shadow: 0 10px 10px rgba(0, 78, 78, 0.2);
+    box-shadow: 0 10px 10px #004e4e33;
 }
 .dashboard_header h1{
     font-size: 40px;
     text-align: center;
-    color: rgb(0, 78, 78);
+    color: #004e4e;
 }
 .heading_button_container {
     margin: 18px auto;
@@ -29,8 +29,8 @@
     align-items: center;
     padding: 18px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 78, 78, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid  rgba(0, 78, 78, 0.2); 
+    box-shadow: 0 4px 8px 0 #004e4e33, 0 6px 20px 0 #00000030;
+    border: 1px solid  #004e4e33; 
     margin-top: 40px;
     background-color: #c0fbff;
 }

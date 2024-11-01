@@ -9,7 +9,6 @@ import { addData, updateData } from "../../Helpers/Utils/api.js";
 import { useToast } from "../../Context/ToastContext.js";
 function EmpForm({
   toggleModal,
-  setdataArray,
   fetchEmployeeDetailes,
   editEmployeeModal,
   empToEdit,
@@ -50,15 +49,14 @@ function EmpForm({
       }
     }
   };
-  const updateEmployee = async (employee) => {
+  const updateEmployee = async (editedEmployee) => {
     try {
-      const editedEmployee = await updateData(employee);
-      setdataArray((prev) =>
-        prev.map((emp) => (emp.id === editedEmployee.id ? editedEmployee : emp))
-      );
-      fetchEmployeeDetailes();
-      toggleModal("editEmployeeModal", false);
-      showToast("Employee Details Updated", "success");
+      const updatedEmployee = await updateData(editedEmployee);
+      if (updatedEmployee) {
+        fetchEmployeeDetailes();
+        toggleModal("editEmployeeModal", false);
+        showToast("Employee Details Updated", "success");
+      }
     } catch (error) {
       showToast(error.message, "error");
     }
@@ -66,10 +64,11 @@ function EmpForm({
   const addNewEmployee = async (employee) => {
     try {
       const addedEmployee = await addData(employee);
-      setdataArray((prev) => [...prev, addedEmployee]);
-      fetchEmployeeDetailes();
-      toggleModal("addEmployeeModal", false);
-      showToast("Employee added successfully", "success");
+      if (addedEmployee) {
+        fetchEmployeeDetailes();
+        toggleModal("addEmployeeModal", false);
+        showToast("Employee added successfully", "success");
+      }
     } catch (error) {
       showToast(error.message, "error");
     }

@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { nameRegex, numberRegex, usernameRegex, passwordRegex } from '../Utils/Constants'
 function useValidation() {
   const [errorMessage, setErrorMessage] = useState("");
   const registrationValidation = (username, password, confirmPassword) => {
     let valid = true;
-    const usernameRegex = /^(?=.*\d)[a-zA-Z0-9]{5,}$/;
-    const passwordRegex = /^(?=.*\d).{8,}$/;
     if (!username.trim() || !password.trim() || !confirmPassword.trim()) {
       setErrorMessage("Please fill out all fields.");
       valid = false;
@@ -29,8 +28,6 @@ function useValidation() {
   };
   const employeeFormValidation = (name, designation, age, dob) => {
     let valid = true;
-    const nameRegex = /^[a-zA-Z\s]+$/;
-    const numberRegex = /^\d+$/;
     const currentDate = new Date();
     const birthDate = new Date(dob);
     const ageDifference =currentDate.getFullYear() - birthDate.getFullYear();

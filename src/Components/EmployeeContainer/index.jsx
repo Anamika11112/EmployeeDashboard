@@ -7,6 +7,14 @@ function EmployeeContainer({
   setEmpToEdit,
   setEmpToDelete,
 }) {
+  const handleUpdate = () => {
+    toggleModal("editEmployeeModal", true);
+    setEmpToEdit(employee);
+  };
+  const handleDelete = () => {
+    toggleModal("deleteModal", true);
+    setEmpToDelete(employee);
+  }
   const { name, designation, age, dob, id } = employee;
   return (
     <div className="employee_container" key={id}>
@@ -24,20 +32,14 @@ function EmployeeContainer({
       <div className="button_group ">
         <Button
           type="button"
-          onClick={() => {
-            toggleModal("editEmployeeModal", true);
-            setEmpToEdit(employee);
-          }}
+          onClick={handleUpdate}
           className="tertiary_button"
         >
           Update
         </Button>
         <Button
           type="button"
-          onClick={() => {
-            toggleModal("deleteModal", true);
-            setEmpToDelete(employee);
-          }}
+          onClick={handleDelete}
           className="tertiary_button"
         >
           Delete
