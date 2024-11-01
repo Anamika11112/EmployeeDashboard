@@ -1,0 +1,28 @@
+.employee_container{
+    width: 90%;
+    height: 100px;
+    margin: 18px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #004e4e33, 0 6px 20px 0 #00000030;
+    border: 1px solid  #004e4e33; 
+}
+.data_entry{
+    width: 180px;
+    height: 100px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.button_group{
+    width: 350px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+

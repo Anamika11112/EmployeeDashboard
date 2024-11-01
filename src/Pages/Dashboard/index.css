@@ -1,0 +1,65 @@
+.dashboard_header{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 10px 10px #004e4e33;
+}
+.dashboard_header h1{
+    font-size: 40px;
+    text-align: center;
+    color: #004e4e;
+}
+.heading_button_container {
+    margin: 18px auto;
+    width: 95.5%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.employee_container_heading{
+    width: 90%;
+    height: 100px;
+    margin: 18px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #004e4e33, 0 6px 20px 0 #00000030;
+    border: 1px solid  #004e4e33; 
+    margin-top: 40px;
+    background-color: #c0fbff;
+}
+.designation {
+    width: 300px; 
+    text-align: center;
+}
+.emp_id {
+    width: 80px; 
+    text-align: center;
+}
+.button_group-heading{
+    width: 350px;
+    height: 55px;
+    display: flex;
+    justify-content: right;
+}
+.personal_deatils{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.noEmployee_message{
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%,-50%);
+}
+
+
